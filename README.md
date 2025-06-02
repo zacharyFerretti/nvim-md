@@ -26,7 +26,7 @@ All of the keybindings below work in both `Normal` and `Visual` modes.
 - In `Normal` mode, they perform the described action on the current word.
 - In `Visual` mode, they perform the described action on the current selection.
 
-### KeyBinds
+### Keybinds
 
 1. `<Leader>mb` - Wraps the current word or selection in double asterisks, `**` to bold the text.
 2. `<Leader>mi` - Wraps the current word or selection in single asterisks, `*` to italicize the text.
