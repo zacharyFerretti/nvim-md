@@ -2,7 +2,7 @@ local M = {}
 
 M.setup = function()
 	local map = vim.keymap.set
-	local core = require("markdown_mode.core")
+	local core = require("nvim_md.core")
 
 	local function map_wrap(keys, desc, chars)
 		-- For visual mode: call function directly while still in visual mode
