@@ -13,7 +13,7 @@ return {
   {
     "zacharyFerretti/nvim-md",
     config = function()
-      require("markdown_mode").setup()
+      require("nvim_md").setup()
     end,
   },
 }
