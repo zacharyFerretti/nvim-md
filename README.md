@@ -32,6 +32,8 @@ All of the keybindings below work in both `Normal` and `Visual` modes.
 2. `<Leader>mi` - Wraps the current word or selection in single asterisks, `*` to italicize the text.
 3. `<Leader>ms` - Wraps the current word or selection in double tildes, `~~` to strikethrough the text.
 4. `<Leader>mc` - Wraps the current word or selection in single backticks,"`" to make the text inline-code.
+5. `<Leader>m{1-6}` - Prepends the current line with 1-6 `#` characters followed by a space, to put the current line in header-syntax for Markdown.
+   - For example, `<Leader>m2` would make the line a Level 2 Markdown header.
 
 ## To Fix
 
@@ -49,6 +51,6 @@ All of the keybindings below work in both `Normal` and `Visual` modes.
 
 In a fully fleshed out version of the plugin, I want the user to be able to:
 
-- [ ] Prepend header indicators (_`#` for H1; `##` for H2; etc._) at front of current line.
+- [x] **Update**: Completed 06.10.2025 - ~~Prepend header indicators (_`#` for H1; `##` for H2; etc._) at front of current line.~~
 - [ ] Convert multiple lines to a multi-line code-block.
 - [ ] Select a string, and wrap it in the necessary characters for it to be a hyperlink.

@@ -1,6 +1,8 @@
 local M = {}
 
 -- Check if text is already wrapped
+-- TODO: Fix this function, does not work to check if the text is
+-- already wrapped.
 local function isWrapped(text, start, end_)
 	return text:sub(1, #start) == start and text:sub(-#end_) == end_
 end
@@ -47,6 +49,17 @@ function M.wrap_or_unwrap(chars)
 
 	-- Reselect the same area and paste
 	vim.cmd('normal! gv"xp')
+end
+
+-- Prepend the passed character to the current line. We leverage
+--  the s/^/ syntax to match the beginning of the line. The no-
+--  hlsearch command is used to remove the "highlighting" from
+--  executing the search command when we perform the replace.
+--
+-- @param char_to_prepend The character to prepend.
+function M.prepend(char_to_prepend)
+	vim.cmd("s/^/" .. char_to_prepend .. " /")
+	vim.cmd("nohlsearch")
 end
 
 return M
