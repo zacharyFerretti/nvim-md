@@ -54,3 +54,4 @@ In a fully fleshed out version of the plugin, I want the user to be able to:
 - [x] **Update**: Completed 06.10.2025 - ~~Prepend header indicators (_`#` for H1; `##` for H2; etc._) at front of current line.~~
 - [ ] Convert multiple lines to a multi-line code-block.
 - [ ] Select a string, and wrap it in the necessary characters for it to be a hyperlink.
+- [ ] Should work when using `Visual Block` mode as well (right now moves all text to where first selection was).
