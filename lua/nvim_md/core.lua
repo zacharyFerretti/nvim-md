@@ -62,4 +62,14 @@ function M.prepend(char_to_prepend)
 	vim.cmd("nohlsearch")
 end
 
+function M.insert_at_cursor(string_to_insert)
+	local cursor = vim.api.nvim_win_get_cursor(0)
+	local row = cursor[1] - 1 -- Deal with off-by-one error.
+	local col = cursor[2]
+	-- Insert the string at cursor position
+	vim.api.nvim_buf_set_text(0, row, col, row, col, { string_to_insert })
+	-- Move cursor to after the inserted text
+	vim.api.nvim_win_set_cursor(0, { row + 1, col + #string_to_insert })
+end
+
 return M

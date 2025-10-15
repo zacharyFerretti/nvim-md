@@ -34,6 +34,7 @@ All of the keybindings below work in both `Normal` and `Visual` modes.
 4. `<Leader>mc` - Wraps the current word or selection in single backticks,"`" to make the text inline-code.
 5. `<Leader>m{1-6}` - Prepends the current line with 1-6 `#` characters followed by a space, to put the current line in header-syntax for Markdown.
    - For example, `<Leader>m2` would make the line a Level 2 Markdown header.
+6. `<Leader>mt` - Inserts the string, "`- [ ] `" at the current cursor position.
 
 ## To Fix
 
@@ -55,3 +56,4 @@ In a fully fleshed out version of the plugin, I want the user to be able to:
 - [ ] Convert multiple lines to a multi-line code-block.
 - [ ] Select a string, and wrap it in the necessary characters for it to be a hyperlink.
 - [ ] Should work when using `Visual Block` mode as well (right now moves all text to where first selection was).
+- [ ] `mt` should be able to figure out where to indent and have the cursor be added intelligently based on styling and lines above / below it.

@@ -23,6 +23,12 @@ M.setup = function()
 		end, { desc = desc })
 	end
 
+	local function insert_at_start(keys, desc, chars)
+		vim.keymap.set("n", keys, function()
+			core.insert_at_cursor(chars)
+		end, { desc = desc })
+	end
+
 	-- Markdown commands under <leader>m
 	map_wrap("<leader>mb", "󰉤 Bold", { "**", "**" })
 	map_wrap("<leader>mi", "󰉷 Italic", { "*", "*" })
@@ -36,6 +42,9 @@ M.setup = function()
 	invoke_prepend("<leader>m4", "󰉮 Header 4", "####")
 	invoke_prepend("<leader>m5", "󰉯 Header 5", "#####")
 	invoke_prepend("<leader>m6", "󰉰 Header 6", "######")
+
+	-- Checklist commands under <leader>mt
+	insert_at_start("<leader>mt", "□ Checklist", "- [ ] ")
 end
 
 return M
